@@ -22,16 +22,16 @@ class Board
     end 
     
     def move_piece(start_pos, end_pos)
-        if @grid[start_pos].empty?
+        if self[start_pos] == nil
             raise "no piece to move"
         end 
 
-        if !@grid[end_pos].empty?
+        if !self[end_pos] == nil
             raise "pos already occupied"
         end 
 
-        @grid[end_pos] = @grid[start_pos]
-        @grid[start_pos] = nil 
+        self[end_pos] = self[start_pos]
+        self[start_pos] = nil 
 
     end 
 
