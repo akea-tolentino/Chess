@@ -1,39 +1,37 @@
 require_relative "board"
 
 class Piece
-    # attr_reader :pos, :color, :board
-    # def initialize(color, board, pos = nil)
-    #     @pos = pos
-    #     @color = color 
-    #     @board = board
-    # end 
-    attr_reader :name
-    def initialize(name)
-        @name = name
-        
+
+    include Slideable
+
+    attr_reader :pos, :color, :board
+    def initialize(color, board, pos = nil)
+        @pos = pos
+        @color = color 
+        @board = Board
     end 
 
-    # def to_s
+    def to_s
 
-    # end 
+    end 
 
-    # def empty?
-    #     @pos.empty?
-    # end 
+    def empty?
+        @pos.empty?
+    end 
 
-    # def valid_moves
-    # end 
+    def valid_moves
+    end 
 
-    # def pos=(val)
-    #     @pos = val
-    # end 
+    def pos=(val)
+        @pos = val
+    end 
     
-    # def Symbol
-    #     @color 
-    # end 
+    def Symbol
+        @color 
+    end 
 
-    # private 
+    private 
 
-    # def move_into_check(end_pos)
-    # end 
+    def move_into_check(end_pos)
+    end 
 end 
