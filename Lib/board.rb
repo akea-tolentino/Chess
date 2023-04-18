@@ -35,6 +35,4 @@ class Board
 
     end 
 
-
-
 end 
