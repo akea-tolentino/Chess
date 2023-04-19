@@ -4,10 +4,10 @@ class Board
     attr_reader :grid, :null_piece
     def initialize
         @grid = Array.new(8) {Array.new(8)}
-        @grid[0].map! {|piece| Piece.new("rook")}
-        @grid[1].map! {|piece| Piece.new("rook")}
-        @grid[6].map! {|piece| Piece.new("rook")}
-        @grid[7].map! {|piece| Piece.new("rook")}
+        @grid[0].map! {|piece| Piece.new("piece")}
+        @grid[1].map! {|piece| Piece.new("piece")}
+        @grid[6].map! {|piece| Piece.new("piece")}
+        @grid[7].map! {|piece| Piece.new("piece")}
         @grid 
     end
 

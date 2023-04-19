@@ -12,17 +12,23 @@ module Slideable
     end 
 
     def moves 
+        potential_pos = []
+        directions = self.move_dirs
+
+        directions.each do |dir|
+            grow_unblocked_moves_in_dir(dir)
+        end 
 
 
-
-    end 
+    end
 
     private 
 
     # def move_dirs
     # end 
 
-    def grow_unblocked_moves_in_dir(dx, dy)
+    def grow_unblocked_moves_in_dir(dir)
+        potential_pos << self.pos + dir until @grid[self.pos] != nil
     end 
 
 
